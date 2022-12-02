@@ -1,0 +1,122 @@
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    height: 21px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: red;
+        transition: .4s all;
+        border-radius: 3px;
+    }
+    span.long {
+        transition: 2s all;
+        width: 36px;
+    }
+    &_active {
+        span {
+            transition: .4s all;
+            margin-bottom: -5px;
+            &:nth-child(1) {
+                transform: rotate(45deg) translateY(15px) translateX(2px);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translateY(-15px) translateX(1px);
+            }
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    &.active {
+        left: 0%;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: relative;
+        cursor: pointer;
+        width: 345px;
+        background-color: $main-color;
+        height: 100%;
+        // left: -100%;
+        padding-top: 140px;
+        padding-left: 40px;
+        transition: .5s all;
+        z-index: 10;
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 35px;
+    }
+    &__link {
+        position: relative;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        color: #fff;
+        margin-bottom: 15px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 10px;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            border: 1px solid #000;
+            transition: .2s all;
+        }
+        &:hover {
+            &:before {
+                background-color: #fff;
+            }
+        }
+        a {
+            color:#fff;
+            text-decoration: none;
+        }
+    }
+    &__social {
+        width: 90px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        opacity: .45;
+    }
+}
