@@ -29,8 +29,9 @@
         padding: 30px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
+        border-radius: 5%;
         &-title {
             margin-top: 15px;
             font-weight: 700;

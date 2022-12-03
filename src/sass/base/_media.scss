@@ -1,0 +1,126 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 400px 515px;
+            column-gap: 40px;
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 245px);
+            &-item {
+                grid-template-columns: 40px 195px;
+                column-gap: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 780px;
+    }
+    .sidepanel {
+        display: none;
+    }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 300px 400px;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+            &-item {
+                grid-template-columns: 40px 340px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .title {
+        &_fz48 {
+            font-size: 25px;
+        }
+    }
+    .hamburger {
+        right: 20px;
+    }
+    .menu {
+        &__block {
+            width: 80%;
+        }
+        &__list {
+            padding-left: 20px;
+        }
+    }
+    .promo {
+        &__title {
+            line-height: 38px;
+        }
+        &__wrapper {
+            right: 70px;
+        }
+    }
+    .about {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template: 400px auto auto / 1fr;
+        }
+        &__photo {
+            grid-row: unset;
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px);
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+
+    }
+    .title {
+        &_fz36 {
+            font-size: 22px;
+        }
+    }
+    .promo {
+        &__title {
+            width: 300px;
+            text-align: center;
+        }
+        &__wrapper {
+            width: 100%;
+            align-items: center;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
+            &-item {
+                grid-template-columns: 40px 1fr;
+            }
+        }
+    }
+}

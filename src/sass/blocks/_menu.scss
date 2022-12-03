@@ -57,7 +57,6 @@
         width: 345px;
         background-color: $main-color;
         height: 100%;
-        // left: -100%;
         padding-top: 140px;
         padding-left: 40px;
         transition: .5s all;
@@ -65,8 +64,8 @@
     }
     &__close {
         position: absolute;
-        top: 25px;
-        right: 25px;
+        top: 16px;
+        right: 12px;
     }
     &__list {
         list-style-type: none;
