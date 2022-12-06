@@ -20,6 +20,9 @@
     &__title {
         text-align: right;
         margin-top: 20px;
+        text-shadow: 10px 10px 30px #f00, -10px -10px 30px #7e2bd9;
+        -webkit-text-stroke: 2px #f00;
+        -webkit-text-fill-color: transparent;
     }
     &__btns {
         margin-top: 25px;
